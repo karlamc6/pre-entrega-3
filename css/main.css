@@ -498,6 +498,11 @@ main div img{
     .famosos-nombres{
         width: 100%;
     }
+    .img-famosos{
+        width: 100%;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
    
     }
 
