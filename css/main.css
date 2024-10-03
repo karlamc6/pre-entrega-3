@@ -16,19 +16,6 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Inria Sans", sans-serif;
-    flex-wrap: nowrap;
-    border-bottom: 1px solid rgb(102, 96, 96); 
-    position: sticky; 
-    top: 0px;
-    margin-top: 0px;
-    z-index: 2;
-}
-
-.container-fluid-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Inria Sans", sans-serif;
     flex-wrap: nowrap; 
     position: sticky; 
     top: 0px;
@@ -36,7 +23,7 @@
     z-index: 2;
 }
 
-.pink-bg{
+.bg-body-tomato{
     background-color: #CB997E;
 }
 
@@ -502,6 +489,11 @@ main div img{
         width: 100%;
         margin-top: 30px;
         margin-right: 30px;
+    }
+    .famosos-h1{
+        width: 90%;
+        margin-right: 30px;
+        text-align: justify;
     }
    
     }
