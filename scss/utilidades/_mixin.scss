@@ -1,0 +1,15 @@
+//mixing con parametros
+
+@mixin medidas ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+
+//mixing sin parametros
+
+@mixin flex{
+    border-bottom: 1px solid #85898a;
+    margin-bottom: 10px;
+}
+

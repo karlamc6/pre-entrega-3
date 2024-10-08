@@ -1,3 +1,10 @@
+//import de utilidades
+
+@import "../utilidades/mixin";
+@import "../utilidades/listas";
+@import "../utilidades/mapas";
+
+
 /* estilos de header */
 
 //nesting
@@ -13,10 +20,10 @@
     margin-top: 0px;
     z-index: 2;
     .bg-body-tomato{
-        background-color: #CB997E;
+        background-color: map-get($colores, secundario);
     }
     img{
-        width: 30%;
+        @include medidas (30%, 30%);
         margin-left: 5px;
     }
     nav{
@@ -33,10 +40,11 @@
                 border-radius: 10px;
                 border-style: none;  
                 transition: 2s;
-                :hover{
+                :hover{   
                     transition: 2s;
+                    border-radius: 10px;
                     transform: translateY(-8px);
-                    box-shadow: 8px 12px 10px whitesmoke;
+                    box-shadow: 8px 12px 10px whitesmoke;   
                 }
             }
         }
@@ -48,8 +56,8 @@
 /* estilos de main */
 
 .index-div{
-    background-color: #1F2324;
-    border-bottom: 1px solid whitesmoke; 
+    @include flex;
+    background-color: map-get($colores, primario );
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,47 +67,48 @@
         width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         padding-top: 50px;
         padding-bottom: 50px;
+        margin-right: 100px;
         .texto{
-            text-align: justify;  
-            margin-left: 80px;     
+            text-align: justify;               
             font-size: 17px; 
             font-family: "Inria Sans", sans-serif; 
-            color: whitesmoke;
+            color: nth($list-color, 4);
         }
         .descripcion{
             font-family: "Quicksand", sans-serif;
             font-size: 15px;
-            margin-top: 15px;
-            margin-left: 80px;  
+            margin-top: 15px;    
             text-align: justify;
             margin-bottom: 15px;
             color: rgb(172, 168, 168);
             display: flex;
             flex-direction: column;
             gap: 10px;
+            align-items: start;
         }
         .estilo-uno{
             text-align: center;
             font-family: "Inria Sans", sans-serif; 
             padding-bottom: 15px;
-            margin-left: 30; 
-            color: rgb(209, 207, 207);
+            color: nth($list-color, 1);
         }
         .estilo-dos{
             text-align: center;
             font-family: "Inria Sans", sans-serif; 
             font-size: 12px;
-            padding-left: 100;    
-            color: rgb(209, 207, 207); 
+            color: nth($list-color, 1);
         }
     }
     .main-imagen{
-        width: 50%;
+        width: 30%;
         display: flex;
         justify-content: center;
+    }
+    img{
+        @include medidas (100%, 0%);
     }
 }
 
@@ -116,8 +125,9 @@ section{
     gap: 8px;
     padding: 10px;
     font-size: 15px;
+    margin-bottom: 20px;
     .section-h3{
-        color: #876E38;
+        color: nth($list-color, 2);
         font-family: "Inria Sans", sans-serif;
         font-size: 20px;
     }
@@ -129,7 +139,7 @@ section{
 /* footer */
 
 footer{
-    background-color: #1F2324;
+    background-color: map-get($colores, primario );
     display: flex;
     flex-direction: column;  
     align-items: center;
@@ -150,10 +160,11 @@ footer{
 .caracteristicas-body{
     height: 100vh;
     .caracteristicas-main{
+        @include flex;
         display: flex;
         flex-direction: row;
         align-content: space-between;
-        border-bottom: 1px solid rgb(102, 96, 96);
+        color: nth($list-color, 3);
         .caracteristicas-div{
             .parrafos{
                 font-family: "Quicksand", sans-serif;
@@ -176,7 +187,7 @@ footer{
             }
             .titulos{
                 font-size: 30px;
-                color: #876E38;
+                color: nth($list-color, 2);
                 font-family: "Inria Sans", sans-serif;
                 font-size: 30px;
                 display: flex;
@@ -204,6 +215,7 @@ footer{
 .compatibilidad-body{
     height: 100vh;
     .compatibilidad-main{
+        @include flex;
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -212,7 +224,7 @@ footer{
         align-content: center;
         text-align: center;
         align-items: center;
-        border-bottom: 1px solid rgb(112, 110, 110); 
+        color: nth($list-color, 3); 
         .textcomp{
             text-align: justify;
             font-family: "Inria Sans", sans-serif; 
@@ -235,14 +247,14 @@ footer{
 .body-famosos{
     height: 100vh;
     .container-fluid-famosos{
-        border-bottom: 1px solid rgb(112, 110, 110);  
+        @include flex;
+        color: nth($list-color, 1);  
         .text-custom{
-            color: #876E38;
+            color: nth($list-color, 2);
             font-size: 35px;
             font-family: "Inria Sans", sans-serif;
-            text-align: justify;
-            
-        }
+            text-align: justify;           
+        } 
         .famosos-main{
             img{
                 width: 100%;
@@ -265,13 +277,14 @@ footer{
 /* contactanos */
 
 .main-contactanos{
+    @include flex;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 40px;
-    border-bottom: 1px solid rgb(102, 96, 96); 
+    color: nth($list-color, 2); 
     .form-contactanos{
         display: flex;
         flex-direction: column;
@@ -286,6 +299,7 @@ footer{
 /* estilos de celular */
 
 @media screen and (max-width:450px){
+
     /* html compatibilidad */
     .compatibilidad-body{
         .compatibilidad-main{
@@ -302,18 +316,18 @@ footer{
             flex-direction: column;
             justify-content: space-between;
             .main-textoss{
-                width: 100%;
-                margin-right: 75px;
+                width: 90%;
+                margin-left: 100px;
                 padding-top: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 .estilo-uno{
-                    margin-left: 80px;
+                    margin-left: 100px;
                     padding-top: 30px;           
                 }
                 .estilo-dos{
-                    margin-left: 80px;
+                    margin-left: 100px;
                 }
             }
             img{

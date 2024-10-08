@@ -27,6 +27,7 @@
 }
 .container-fluid img {
   width: 30%;
+  height: 30%;
   margin-left: 5px;
 }
 .container-fluid nav ul {
@@ -46,6 +47,7 @@
 }
 .container-fluid nav ul .menu-header :hover {
   transition: 2s;
+  border-radius: 10px;
   transform: translateY(-8px);
   box-shadow: 8px 12px 10px whitesmoke;
 }
@@ -53,8 +55,9 @@
 /* estilos del html index */
 /* estilos de main */
 .index-div {
+  border-bottom: 1px solid #85898a;
+  margin-bottom: 10px;
   background-color: #1F2324;
-  border-bottom: 1px solid whitesmoke;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -65,13 +68,13 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-right: 100px;
 }
 .index-div .main-textoss .texto {
   text-align: justify;
-  margin-left: 80px;
   font-size: 17px;
   font-family: "Inria Sans", sans-serif;
   color: whitesmoke;
@@ -80,32 +83,34 @@
   font-family: "Quicksand", sans-serif;
   font-size: 15px;
   margin-top: 15px;
-  margin-left: 80px;
   text-align: justify;
   margin-bottom: 15px;
   color: rgb(172, 168, 168);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: start;
 }
 .index-div .main-textoss .estilo-uno {
   text-align: center;
   font-family: "Inria Sans", sans-serif;
   padding-bottom: 15px;
-  margin-left: 30;
-  color: rgb(209, 207, 207);
+  color: #CB997E;
 }
 .index-div .main-textoss .estilo-dos {
   text-align: center;
   font-family: "Inria Sans", sans-serif;
   font-size: 12px;
-  padding-left: 100;
-  color: rgb(209, 207, 207);
+  color: #CB997E;
 }
 .index-div .main-imagen {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: center;
+}
+.index-div img {
+  width: 100%;
+  height: 0%;
 }
 
 /* section */
@@ -120,6 +125,7 @@ section {
   gap: 8px;
   padding: 10px;
   font-size: 15px;
+  margin-bottom: 20px;
 }
 section .section-h3 {
   color: #876E38;
@@ -153,10 +159,12 @@ footer .footer-pie {
   height: 100vh;
 }
 .caracteristicas-body .caracteristicas-main {
+  border-bottom: 1px solid #85898a;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  border-bottom: 1px solid rgb(102, 96, 96);
+  color: #282826;
 }
 .caracteristicas-body .caracteristicas-main .caracteristicas-div .parrafos {
   font-family: "Quicksand", sans-serif;
@@ -203,6 +211,8 @@ footer .footer-pie {
   height: 100vh;
 }
 .compatibilidad-body .compatibilidad-main {
+  border-bottom: 1px solid #85898a;
+  margin-bottom: 10px;
   margin: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -211,7 +221,7 @@ footer .footer-pie {
   align-content: center;
   text-align: center;
   align-items: center;
-  border-bottom: 1px solid rgb(112, 110, 110);
+  color: #282826;
 }
 .compatibilidad-body .compatibilidad-main .textcomp {
   text-align: justify;
@@ -233,7 +243,9 @@ footer .footer-pie {
   height: 100vh;
 }
 .body-famosos .container-fluid-famosos {
-  border-bottom: 1px solid rgb(112, 110, 110);
+  border-bottom: 1px solid #85898a;
+  margin-bottom: 10px;
+  color: #CB997E;
 }
 .body-famosos .container-fluid-famosos .text-custom {
   color: #876E38;
@@ -258,13 +270,15 @@ footer .footer-pie {
 
 /* contactanos */
 .main-contactanos {
+  border-bottom: 1px solid #85898a;
+  margin-bottom: 10px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 40px;
-  border-bottom: 1px solid rgb(102, 96, 96);
+  color: #876E38;
 }
 .main-contactanos .form-contactanos {
   display: flex;
@@ -291,19 +305,19 @@ footer .footer-pie {
     justify-content: space-between;
   }
   .main-index .index-div .main-textoss {
-    width: 100%;
-    margin-right: 75px;
+    width: 90%;
+    margin-left: 100px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .main-index .index-div .main-textoss .estilo-uno {
-    margin-left: 80px;
+    margin-left: 100px;
     padding-top: 30px;
   }
   .main-index .index-div .main-textoss .estilo-dos {
-    margin-left: 80px;
+    margin-left: 100px;
   }
   .main-index .index-div img {
     width: 250px;
