@@ -296,9 +296,9 @@ footer{
 }
 
 /* MQ */
-/* estilos de celular */
+/* estilos de Mobile o celular */
 
-@media screen and (max-width:450px){
+@media screen and (max-width:950px){
 
     /* html compatibilidad */
     .compatibilidad-body{
@@ -415,5 +415,147 @@ footer{
         justify-content: center;
         text-align: center;
         margin-right: 25px;
+    }
+}
+
+/* estilos de Tablet */
+
+@media screen and (max-width:1280px){
+    /* html index */
+    .main-index{
+        .index-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;           
+            .main-textoss{
+                width: 95%;
+                margin-left: 100px;
+                padding-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .estilo-uno{
+                    margin-left: 290px;
+                    padding-top: 30px; 
+                    font-size: 25px;          
+                }
+                .estilo-dos{
+                    margin-left: 270px; 
+                    font-size: 25px;                  
+                }
+                .descripcion{
+                    font-size: 25px;
+                }
+            }
+            img{
+                width: 450px;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    /* html compatibilidad */
+    .compatibilidad-body{
+        .compatibilidad-main{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(12, 1fr);
+            .textcomp{
+                font-size: 28px;
+            }
+            img{
+                width: 400px;
+            }
+        }
+    }
+
+    /* html caracteristicas */
+    .caracteristicas-body{
+        .caracteristicas-main{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .caracteristicas-div{
+                width: 100%;
+                margin-top: 20px;
+                .titulos{
+                    font-size: 30px;
+                }
+                .parrafos{
+                    font-size: 25px;
+                }
+                .contenedor-ul{
+                    font-size: 25px; 
+                }
+            }
+            .caracteristicas-imagenes{
+                width: 500px;
+                display: flex;
+                flex-direction: column;              
+                align-items: center;
+                justify-content: center;               
+                margin-bottom: 20px;
+                gap: 10px;
+            }
+        }
+    }
+
+    /* html Famosos */
+    .container-fluid-famosos{
+        .famosos-h1{         
+            text-align: justify;
+            font-size: 50px;
+        }
+        .famosos-main{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            .img-famosos{
+                width: 100%;
+                margin-right: 20px;
+                margin-top: 60px;
+            }           
+            .famosos-descripcion{
+                width: 95%;                    
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-content: center; 
+                font-size: 25px;
+                .famosos-nombres{
+                    font-size: 30px;
+                }              
+            }
+            
+        }
+    }
+
+    /* html contactanos */
+    .main-contactanos{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        h1{
+            font-size: 60px;
+            margin-right: 70px;
+        }
+        .form-contactanos{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            font-size: 35px;
+            
+        }
     }
 }
