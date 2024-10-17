@@ -9,6 +9,8 @@
 
 //nesting
 
+/* estilos de Desktop */
+
 .container-fluid{
     display: flex;
     justify-content: space-between;
@@ -420,7 +422,7 @@ footer{
 
 /* estilos de Tablet */
 
-@media screen and (min-width:1000px){
+@media screen and (min-width:800px) and (max-width:1290px){
     /* html index */
     .main-index{
         .index-div{
