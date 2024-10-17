@@ -395,7 +395,7 @@ footer .footer-pie {
   }
 }
 /* estilos de Tablet */
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1000px) {
   /* html index */
   .main-index .index-div {
     display: flex;
